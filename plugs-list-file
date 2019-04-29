@@ -1,4 +1,4 @@
-begin
+begin;
 1, kivydev-upgrade, 环境升级, https://kivy.club/forum.php?mod=viewthread&tid=28;
 2, test;
 ends
