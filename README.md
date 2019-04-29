@@ -1,0 +1,2 @@
+# kdpp
+kivydev plugins platform
