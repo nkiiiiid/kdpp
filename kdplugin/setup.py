@@ -32,7 +32,7 @@ setup(
     packages=[
         'kdpp', 'kdpp.tools', 'kdpp.scripts'
         ],
-    package_data={'kdpp': ['kdpp.nt']},
+    package_data={'kdpp': ['kdpp.nt','default.p4a']},
     include_package_data=True,
     entry_points={
         'console_scripts': [

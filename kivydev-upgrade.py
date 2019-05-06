@@ -19,7 +19,7 @@ print('download 17c ndk')
 os.system('wget -P'+' '+ndk_dir+' '+'https://dl.google.com/android/repository/android-ndk-r17c-linux-x86_64.zip')
 
 print('unzip ndk')
-os.system('echo y | unzip'+' '+ndk_dir+ '/' + 'android-ndk-r17c-linux-x86_64.zip')
+os.system('echo y | unzip'+' '+ndk_dir+ '/' + 'android-ndk-r17c-linux-x86_64.zip' + ' -d ' + ndk_dir)
 
 print('upgrade complete')
 

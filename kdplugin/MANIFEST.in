@@ -1,1 +1,1 @@
-recursive-include buildozer *.nt
+recursive-include buildozer *.nt *.p4a
