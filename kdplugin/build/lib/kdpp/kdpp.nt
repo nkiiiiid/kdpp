@@ -1,0 +1,12 @@
+[app]
+
+# (int) 是否升级打包环境（0=否，1=是）
+kivydev.upgrade = 0
+
+
+[env]
+
+# (str) 定义环境变量
+sdk_dir = ~/andr
+ndk_dir = ~/andr
+build_dir = ~/.local/share/python-for-android

@@ -1,0 +1,12 @@
+MANIFEST.in
+setup.py
+kdpp/__init__.py
+kdpp.egg-info/PKG-INFO
+kdpp.egg-info/SOURCES.txt
+kdpp.egg-info/dependency_links.txt
+kdpp.egg-info/entry_points.txt
+kdpp.egg-info/top_level.txt
+kdpp/scripts/__init__.py
+kdpp/scripts/client.py
+kdpp/tools/__init__.py
+kdpp/tools/netcrawl.py
