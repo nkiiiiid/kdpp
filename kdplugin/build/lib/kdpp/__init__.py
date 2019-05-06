@@ -13,15 +13,12 @@ __version__ = '1.0'
 import os
 import re
 import sys
-import select
-import codecs
-import textwrap
-from sys import stdout, stderr, exit
+from sys import stdout, exit
 from re import search
-from os.path import join, exists, dirname, realpath, splitext, expanduser
-from os import environ, unlink, walk, sep, listdir, makedirs
+from os.path import join, exists, dirname
+from os import environ, unlink, makedirs
 from copy import copy
-from shutil import copyfile, rmtree, copytree, move
+from shutil import copyfile, rmtree, copytree
 import socket
 socket.setdefaulttimeout(30)
 
@@ -282,7 +279,7 @@ class Kdpp(object):
         self.getplugs()
         
     def cmd_runplug(self, *args):
-        '''运行插件, kdpp runplug pluginfilename
+        '''运行插件, "kdpp runplug pluginfilename"
         '''
         self.check_kdpp_nt()
         if not args:
@@ -290,7 +287,17 @@ class Kdpp(object):
             exit(1)
         os.system('python' + ' ' + self.plug_dir + '/' + args[0] + '.py')
 
-    
+    def cmd_rmplug(self, *args):
+        '''删除插件, "kdpp rmplug pluginfilename"
+        '''
+        if not args:
+            self.error("错误：缺少参数")
+            exit(1)
+        plug_full_name = self.plug_dir + '/' + args[0] + '.py'
+        if exists(plug_full_name):
+            unlink(plug_full_name)
+        self.info('删除完毕')
+
     def buildapk(self,*args):
         self.check_p4a()
         os.system('p4a apk') 
