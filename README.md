@@ -15,7 +15,7 @@ download whl from release in this repo
 #### 请在项目目录下运行本工具
 
 
-##常用命令
+## 0x01 常用命令
 
 `kdpp init`
 
@@ -73,6 +73,21 @@ build_dir, python-for-android的build/dist/package所在目录
 
 查看帮助
 
+## 0x02 插件开发流程
+
+
+
+-  插件使用python编写，插件平台kdpp.nt文件配置的全部环境变量可以供插件使用，环境变量调用方法：
+```
+import os
+ndk_dir = os.environ['ndk_dir']
+```
+目前可以使用的环境变量就是上面提到的env区块。
+
+- 插件可以按照普通py脚本形式实现任意功能，如果需要额外的环境变量支持，可以在本repo提issue，我会在下次更新中择优添加。
+
+- 插件开发完毕后上传到网络，将地址提供给我，我会添加到`plugs-list-file`当中，按照以下格式提供：  
+ `插件文件名，插件功能描述，插件下载地址  ` 
 
 
 enjoy!
